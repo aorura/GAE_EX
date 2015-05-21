@@ -24,7 +24,7 @@ from ufundy.public import public_handlers
 DEBUG = os.environ.get('SERVER_SOFTWARE', '').startswith('Dev')
 
 webapp2_config = {}
-webapp2_config['webapp2_extra.sessions'] = {'secret_key' : 'ZyOh3uJLqnDTGsSSu3svlU3W',}
+webapp2_config['webapp2_extra.sessions'] = {'secret_key' : 'my-super-secret-key'}
 
 app = webapp2.WSGIApplication([
     webapp2.Route(r'/', handler=public_handlers.HomeHandler, name='home'),
